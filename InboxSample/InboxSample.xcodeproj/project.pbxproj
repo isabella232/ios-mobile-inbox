@@ -12,6 +12,8 @@
 		561E32A22497D42C00FFBEAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561E32A02497D42C00FFBEAC /* Main.storyboard */; };
 		561E32A42497D42E00FFBEAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 561E32A32497D42E00FFBEAC /* Assets.xcassets */; };
 		561E32A72497D42E00FFBEAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561E32A52497D42E00FFBEAC /* LaunchScreen.storyboard */; };
+		CCADD5BE2498AA0C00B629E3 /* EmarsysInboxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADD5BD2498AA0C00B629E3 /* EmarsysInboxTableViewCell.swift */; };
+		CCADD5C02498B06F00B629E3 /* EmarsysInboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADD5BF2498B06F00B629E3 /* EmarsysInboxView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		561E32A32497D42E00FFBEAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		561E32A62497D42E00FFBEAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		561E32A82497D42E00FFBEAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCADD5BD2498AA0C00B629E3 /* EmarsysInboxTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmarsysInboxTableViewCell.swift; sourceTree = "<group>"; };
+		CCADD5BF2498B06F00B629E3 /* EmarsysInboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmarsysInboxView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				561E329A2497D42C00FFBEAC /* AppDelegate.swift */,
 				561E329E2497D42C00FFBEAC /* ViewController.swift */,
+				CCADD5BD2498AA0C00B629E3 /* EmarsysInboxTableViewCell.swift */,
+				CCADD5BF2498B06F00B629E3 /* EmarsysInboxView.swift */,
 				561E32A02497D42C00FFBEAC /* Main.storyboard */,
 				561E32A32497D42E00FFBEAC /* Assets.xcassets */,
 				561E32A52497D42E00FFBEAC /* LaunchScreen.storyboard */,
@@ -135,7 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCADD5C02498B06F00B629E3 /* EmarsysInboxView.swift in Sources */,
 				561E329F2497D42C00FFBEAC /* ViewController.swift in Sources */,
+				CCADD5BE2498AA0C00B629E3 /* EmarsysInboxTableViewCell.swift in Sources */,
 				561E329B2497D42C00FFBEAC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,7 +220,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -266,7 +274,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
