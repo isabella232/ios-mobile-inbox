@@ -12,11 +12,15 @@
 		561E32A22497D42C00FFBEAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561E32A02497D42C00FFBEAC /* Main.storyboard */; };
 		561E32A42497D42E00FFBEAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 561E32A32497D42E00FFBEAC /* Assets.xcassets */; };
 		561E32A72497D42E00FFBEAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561E32A52497D42E00FFBEAC /* LaunchScreen.storyboard */; };
+		5A23426AAA267BA0A5A0009A /* Pods_InboxSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 056F22F2A574BFBDC6819A02 /* Pods_InboxSample.framework */; };
 		CCADD5BE2498AA0C00B629E3 /* EmarsysInboxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADD5BD2498AA0C00B629E3 /* EmarsysInboxTableViewCell.swift */; };
-		CCADD5C02498B06F00B629E3 /* EmarsysInboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADD5BF2498B06F00B629E3 /* EmarsysInboxView.swift */; };
+		CCADD5C22499F31C00B629E3 /* EmarsysInboxUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADD5C12499F31C00B629E3 /* EmarsysInboxUIColor.swift */; };
+		CCADD5C4249A05B900B629E3 /* EmarsysInboxController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADD5C3249A05B900B629E3 /* EmarsysInboxController.swift */; };
+		CCADD5C8249B0CD400B629E3 /* EmarsysInbox.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCADD5C7249B0CD400B629E3 /* EmarsysInbox.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		056F22F2A574BFBDC6819A02 /* Pods_InboxSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InboxSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		561E32972497D42C00FFBEAC /* InboxSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InboxSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		561E329A2497D42C00FFBEAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		561E329E2497D42C00FFBEAC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,7 +29,11 @@
 		561E32A62497D42E00FFBEAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		561E32A82497D42E00FFBEAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCADD5BD2498AA0C00B629E3 /* EmarsysInboxTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmarsysInboxTableViewCell.swift; sourceTree = "<group>"; };
-		CCADD5BF2498B06F00B629E3 /* EmarsysInboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmarsysInboxView.swift; sourceTree = "<group>"; };
+		CCADD5C12499F31C00B629E3 /* EmarsysInboxUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmarsysInboxUIColor.swift; sourceTree = "<group>"; };
+		CCADD5C3249A05B900B629E3 /* EmarsysInboxController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmarsysInboxController.swift; sourceTree = "<group>"; };
+		CCADD5C7249B0CD400B629E3 /* EmarsysInbox.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmarsysInbox.storyboard; sourceTree = "<group>"; };
+		E7BD024D22B5C08E3B5831F0 /* Pods-InboxSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InboxSample.release.xcconfig"; path = "Target Support Files/Pods-InboxSample/Pods-InboxSample.release.xcconfig"; sourceTree = "<group>"; };
+		EFF9BE548E33021C6DF52CE3 /* Pods-InboxSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InboxSample.debug.xcconfig"; path = "Target Support Files/Pods-InboxSample/Pods-InboxSample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +41,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A23426AAA267BA0A5A0009A /* Pods_InboxSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5399A8254F46EDF2B0F4E89E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EFF9BE548E33021C6DF52CE3 /* Pods-InboxSample.debug.xcconfig */,
+				E7BD024D22B5C08E3B5831F0 /* Pods-InboxSample.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		561E328E2497D42C00FFBEAC = {
 			isa = PBXGroup;
 			children = (
 				561E32992497D42C00FFBEAC /* InboxSample */,
 				561E32982497D42C00FFBEAC /* Products */,
+				5399A8254F46EDF2B0F4E89E /* Pods */,
+				BDD2B9DC45E01DE111785F12 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,14 +81,24 @@
 			children = (
 				561E329A2497D42C00FFBEAC /* AppDelegate.swift */,
 				561E329E2497D42C00FFBEAC /* ViewController.swift */,
-				CCADD5BD2498AA0C00B629E3 /* EmarsysInboxTableViewCell.swift */,
-				CCADD5BF2498B06F00B629E3 /* EmarsysInboxView.swift */,
 				561E32A02497D42C00FFBEAC /* Main.storyboard */,
+				CCADD5C3249A05B900B629E3 /* EmarsysInboxController.swift */,
+				CCADD5BD2498AA0C00B629E3 /* EmarsysInboxTableViewCell.swift */,
+				CCADD5C12499F31C00B629E3 /* EmarsysInboxUIColor.swift */,
+				CCADD5C7249B0CD400B629E3 /* EmarsysInbox.storyboard */,
 				561E32A32497D42E00FFBEAC /* Assets.xcassets */,
 				561E32A52497D42E00FFBEAC /* LaunchScreen.storyboard */,
 				561E32A82497D42E00FFBEAC /* Info.plist */,
 			);
 			path = InboxSample;
+			sourceTree = "<group>";
+		};
+		BDD2B9DC45E01DE111785F12 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				056F22F2A574BFBDC6819A02 /* Pods_InboxSample.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +108,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 561E32AB2497D42E00FFBEAC /* Build configuration list for PBXNativeTarget "InboxSample" */;
 			buildPhases = (
+				F205410D9D6111B492C2D67E /* [CP] Check Pods Manifest.lock */,
 				561E32932497D42C00FFBEAC /* Sources */,
 				561E32942497D42C00FFBEAC /* Frameworks */,
 				561E32952497D42C00FFBEAC /* Resources */,
+				EC4B73E27A44F07B026A2D21 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,21 +163,65 @@
 			files = (
 				561E32A72497D42E00FFBEAC /* LaunchScreen.storyboard in Resources */,
 				561E32A42497D42E00FFBEAC /* Assets.xcassets in Resources */,
+				CCADD5C8249B0CD400B629E3 /* EmarsysInbox.storyboard in Resources */,
 				561E32A22497D42C00FFBEAC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		EC4B73E27A44F07B026A2D21 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InboxSample/Pods-InboxSample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InboxSample/Pods-InboxSample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InboxSample/Pods-InboxSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F205410D9D6111B492C2D67E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InboxSample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		561E32932497D42C00FFBEAC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCADD5C02498B06F00B629E3 /* EmarsysInboxView.swift in Sources */,
+				CCADD5C22499F31C00B629E3 /* EmarsysInboxUIColor.swift in Sources */,
 				561E329F2497D42C00FFBEAC /* ViewController.swift in Sources */,
 				CCADD5BE2498AA0C00B629E3 /* EmarsysInboxTableViewCell.swift in Sources */,
 				561E329B2497D42C00FFBEAC /* AppDelegate.swift in Sources */,
+				CCADD5C4249A05B900B629E3 /* EmarsysInboxController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +363,7 @@
 		};
 		561E32AC2497D42E00FFBEAC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFF9BE548E33021C6DF52CE3 /* Pods-InboxSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -304,6 +382,7 @@
 		};
 		561E32AD2497D42E00FFBEAC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7BD024D22B5C08E3B5831F0 /* Pods-InboxSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

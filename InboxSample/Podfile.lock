@@ -1,0 +1,16 @@
+PODS:
+  - EmarsysSDK (2.5.1)
+
+DEPENDENCIES:
+  - EmarsysSDK
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - EmarsysSDK
+
+SPEC CHECKSUMS:
+  EmarsysSDK: b51fbaca87129c1f84d814e3d6e89068e84216ff
+
+PODFILE CHECKSUM: c7debe815cdfa2edda8bab42c3df0046350e0d99
+
+COCOAPODS: 1.9.0

@@ -10,7 +10,7 @@ import UIKit
 
 class EmarsysInboxTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var starImage: UIImageView!
+    @IBOutlet weak var favImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var datetimeLabel: UILabel!
     
