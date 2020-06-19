@@ -37,6 +37,7 @@ class EmarsysInboxController: UIViewController {
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     var refreshControl = UIRefreshControl()
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     var messages: [EMSMessage]?
     
@@ -55,6 +56,7 @@ class EmarsysInboxController: UIViewController {
     
     func fetchMessages() {
         Emarsys.messageInbox.fetchMessages { [weak self] (result, error) in
+            self?.activityIndicatorView.stopAnimating()
             self?.refreshControl.endRefreshing()
             for message in result?.messages ?? [] {
                 print(message.title)
@@ -83,7 +85,8 @@ extension EmarsysInboxController: UITableViewDataSource, UITableViewDelegate {
         cell.datetimeLabel.textColor = tableViewCellForegroundColor
         guard indexPath.row < messages?.count ?? 0, let message = messages?[indexPath.row] else { return cell }
         cell.titleLabel.text = message.title
-        cell.datetimeLabel.text = "\(message.receivedAt)"
+        cell.datetimeLabel.text = DateFormatter.yyyyMMddHHmm
+            .string(from: Date(timeIntervalSince1970: TimeInterval(truncating: message.receivedAt)))
         return cell
     }
     

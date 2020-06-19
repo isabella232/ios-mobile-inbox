@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,7 +14,7 @@
 		561E32A72497D42E00FFBEAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561E32A52497D42E00FFBEAC /* LaunchScreen.storyboard */; };
 		5A23426AAA267BA0A5A0009A /* Pods_InboxSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 056F22F2A574BFBDC6819A02 /* Pods_InboxSample.framework */; };
 		CCADD5BE2498AA0C00B629E3 /* EmarsysInboxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADD5BD2498AA0C00B629E3 /* EmarsysInboxTableViewCell.swift */; };
-		CCADD5C22499F31C00B629E3 /* EmarsysInboxUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADD5C12499F31C00B629E3 /* EmarsysInboxUIColor.swift */; };
+		CCADD5C22499F31C00B629E3 /* EmarsysInboxExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADD5C12499F31C00B629E3 /* EmarsysInboxExtensions.swift */; };
 		CCADD5C4249A05B900B629E3 /* EmarsysInboxController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADD5C3249A05B900B629E3 /* EmarsysInboxController.swift */; };
 		CCADD5C8249B0CD400B629E3 /* EmarsysInbox.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCADD5C7249B0CD400B629E3 /* EmarsysInbox.storyboard */; };
 /* End PBXBuildFile section */
@@ -29,7 +29,7 @@
 		561E32A62497D42E00FFBEAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		561E32A82497D42E00FFBEAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCADD5BD2498AA0C00B629E3 /* EmarsysInboxTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmarsysInboxTableViewCell.swift; sourceTree = "<group>"; };
-		CCADD5C12499F31C00B629E3 /* EmarsysInboxUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmarsysInboxUIColor.swift; sourceTree = "<group>"; };
+		CCADD5C12499F31C00B629E3 /* EmarsysInboxExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmarsysInboxExtensions.swift; sourceTree = "<group>"; };
 		CCADD5C3249A05B900B629E3 /* EmarsysInboxController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmarsysInboxController.swift; sourceTree = "<group>"; };
 		CCADD5C7249B0CD400B629E3 /* EmarsysInbox.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmarsysInbox.storyboard; sourceTree = "<group>"; };
 		E7BD024D22B5C08E3B5831F0 /* Pods-InboxSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InboxSample.release.xcconfig"; path = "Target Support Files/Pods-InboxSample/Pods-InboxSample.release.xcconfig"; sourceTree = "<group>"; };
@@ -54,7 +54,6 @@
 				EFF9BE548E33021C6DF52CE3 /* Pods-InboxSample.debug.xcconfig */,
 				E7BD024D22B5C08E3B5831F0 /* Pods-InboxSample.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -84,8 +83,8 @@
 				561E32A02497D42C00FFBEAC /* Main.storyboard */,
 				CCADD5C3249A05B900B629E3 /* EmarsysInboxController.swift */,
 				CCADD5BD2498AA0C00B629E3 /* EmarsysInboxTableViewCell.swift */,
-				CCADD5C12499F31C00B629E3 /* EmarsysInboxUIColor.swift */,
 				CCADD5C7249B0CD400B629E3 /* EmarsysInbox.storyboard */,
+				CCADD5C12499F31C00B629E3 /* EmarsysInboxExtensions.swift */,
 				561E32A32497D42E00FFBEAC /* Assets.xcassets */,
 				561E32A52497D42E00FFBEAC /* LaunchScreen.storyboard */,
 				561E32A82497D42E00FFBEAC /* Info.plist */,
@@ -217,7 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCADD5C22499F31C00B629E3 /* EmarsysInboxUIColor.swift in Sources */,
+				CCADD5C22499F31C00B629E3 /* EmarsysInboxExtensions.swift in Sources */,
 				561E329F2497D42C00FFBEAC /* ViewController.swift in Sources */,
 				CCADD5BE2498AA0C00B629E3 /* EmarsysInboxTableViewCell.swift in Sources */,
 				561E329B2497D42C00FFBEAC /* AppDelegate.swift in Sources */,

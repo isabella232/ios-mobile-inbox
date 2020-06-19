@@ -1,5 +1,5 @@
 //
-//  EmarsysInboxUIColor.swift
+//  EmarsysInboxExtensions.swift
 //  InboxSample
 //
 //  Created by Bianca Lui on 17/6/2020.
@@ -23,5 +23,15 @@ extension UIColor {
         let a = ((CGFloat)((hex & 0x000000FF) >> 0)) / 255.0
         return UIColor(red: r, green: g, blue: b, alpha: a)
     }
+    
+}
+
+extension DateFormatter {
+    
+    static let yyyyMMddHHmm: DateFormatter = {
+        let df = DateFormatter()
+        df.dateFormat = "yyyy-MM-dd HH:mm"
+        return df
+    }()
     
 }
