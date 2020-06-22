@@ -40,6 +40,7 @@ class EmarsysInboxController: UIViewController {
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     var messages: [EMSMessage]?
+    var isFetchingMessages = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,25 +50,25 @@ class EmarsysInboxController: UIViewController {
         tableView.backgroundColor = tableViewBackgroundColor
         
         tableView.addSubview(refreshControl)
-        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        refreshControl.addTarget(self, action: #selector(fetchMessages), for: .valueChanged)
         
         fetchMessages()
     }
     
-    func fetchMessages() {
+    @objc func fetchMessages() {
+        guard !isFetchingMessages else { return }
+        isFetchingMessages = true
         Emarsys.messageInbox.fetchMessages { [weak self] (result, error) in
-            self?.activityIndicatorView.stopAnimating()
-            self?.refreshControl.endRefreshing()
             for message in result?.messages ?? [] {
                 print(message.title)
             }
+            
+            self?.activityIndicatorView.stopAnimating()
+            self?.refreshControl.endRefreshing()
             self?.messages = result?.messages
+            self?.isFetchingMessages = false
             self?.tableView.reloadData()
         }
-    }
-    
-    @objc func refresh() {
-        fetchMessages()
     }
     
 }
