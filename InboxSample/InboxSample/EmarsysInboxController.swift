@@ -106,7 +106,7 @@ extension EmarsysInboxController: UITableViewDataSource, UITableViewDelegate {
 
 extension EmarsysInboxController {
     
-    func favImageViewClicked(_ sender: UIGestureRecognizer) {
+    @objc func favImageViewClicked(_ sender: UIGestureRecognizer) {
         guard let index = sender.view?.tag, index < messages?.count ?? 0, let message = messages?[index] else { return }
         if let pinnedIndex = message.tags?.firstIndex(of: EmarsysInboxTag.pinned) {
 //            Emarsys.messageInbox.removeTag(EmarsysInboxTag.pinned, fromMessage: message.id) { [weak self] (error) in
