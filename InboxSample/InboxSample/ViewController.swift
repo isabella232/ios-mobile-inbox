@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     @IBAction func buttonClicked(_ sender: UIButton) {
         navigationController?.pushViewController(EmarsysInboxController.new(), animated: true)
-//        present(EmarsysInboxController.get(), animated: true, completion: nil)
+//        present(EmarsysInboxController.new(), animated: true, completion: nil)
     }
     
 }

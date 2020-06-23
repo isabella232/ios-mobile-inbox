@@ -16,15 +16,6 @@ class EmarsysInboxController: UIViewController {
             .instantiateViewController(withIdentifier: "EmarsysInboxController")
     }
     
-    public var headerBackgroundColor: UIColor? = .defaultHeaderBackgroundColor
-    public var headerForegroundColor: UIColor? = .defaultHeaderForegroundColor
-    public var tableViewBackgroundColor: UIColor? = .defaultTableViewBackgroundColor
-    public var tableViewCellTintColor: UIColor? = .defaultTableViewCellTintColor
-    public var tableViewCellForegroundColor: UIColor? = .defaultTableViewCellForegroundColor
-    public var tableViewCellFavImageOff: UIImage? = UIImage(systemName: "star") // todo change to image support <ios13
-    public var tableViewCellFavImageOn: UIImage? = UIImage(systemName: "star.fill")
-    public var activityIndicatorColor: UIColor? = .defaultActivityIndicatorColor
-    
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -37,11 +28,11 @@ class EmarsysInboxController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        headerView.backgroundColor = headerBackgroundColor
-        headerLabel.textColor = headerForegroundColor
-        tableView.backgroundColor = tableViewBackgroundColor
-        refreshControl.tintColor = activityIndicatorColor?.withAlphaComponent(0.5)
-        activityIndicatorView.color = activityIndicatorColor
+        headerView.backgroundColor = EmarsysInboxConfig.headerBackgroundColor
+        headerLabel.textColor = EmarsysInboxConfig.headerForegroundColor
+        tableView.backgroundColor = EmarsysInboxConfig.bodyBackgroundColor
+        refreshControl.tintColor = EmarsysInboxConfig.activityIndicatorColor?.withAlphaComponent(0.5)
+        activityIndicatorView.color = EmarsysInboxConfig.activityIndicatorColor
         
         tableView.addSubview(refreshControl)
         refreshControl.addTarget(self, action: #selector(fetchMessages), for: .valueChanged)
@@ -78,19 +69,22 @@ extension EmarsysInboxController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: EmarsysInboxTableViewCell.id, for: indexPath) as! EmarsysInboxTableViewCell
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: EmarsysInboxTableViewCell.id, for: indexPath) as! EmarsysInboxTableViewCell
+        
         cell.favImageView?.tag = indexPath.row
         if cell.favImageView?.gestureRecognizers?.isEmpty ?? true {
-            cell.favImageView?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(favImageViewClicked)))
+            cell.favImageView?.addGestureRecognizer(
+                UITapGestureRecognizer(target: self, action: #selector(favImageViewClicked)))
         }
         
-        cell.favImageView?.tintColor = tableViewCellTintColor
-        cell.titleLabel.textColor = tableViewCellForegroundColor
-        cell.datetimeLabel.textColor = tableViewCellForegroundColor
+        cell.favImageView?.tintColor = EmarsysInboxConfig.bodyTintColor
+        cell.titleLabel.textColor = EmarsysInboxConfig.bodyForegroundColor
+        cell.datetimeLabel.textColor = EmarsysInboxConfig.bodyForegroundColor
         
         guard indexPath.row < messages?.count ?? 0, let message = messages?[indexPath.row] else { return cell }
         cell.favImageView?.image = message.tags?.contains(EmarsysInboxTag.pinned) ?? false ?
-            tableViewCellFavImageOn : tableViewCellFavImageOff
+            EmarsysInboxConfig.favImageOn : EmarsysInboxConfig.favImageOff
         cell.titleLabel.text = message.title
         cell.datetimeLabel.text = DateFormatter.yyyyMMddHHmm
             .string(from: Date(timeIntervalSince1970: TimeInterval(truncating: message.receivedAt)))
@@ -98,13 +92,17 @@ extension EmarsysInboxController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath)
-    }
-    
 }
 
 extension EmarsysInboxController {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? EmarsysInboxDetailController,
+            let tableViewCell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: tableViewCell) {
+            destination.initialIndex = indexPath.row
+            destination.messages = messages
+        }
+    }
     
     @objc func favImageViewClicked(_ sender: UIGestureRecognizer) {
         guard let index = sender.view?.tag, index < messages?.count ?? 0, let message = messages?[index] else { return }
