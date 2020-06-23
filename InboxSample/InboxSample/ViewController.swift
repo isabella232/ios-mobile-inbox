@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         Emarsys.setContactWithContactFieldValue("biancalui")
     }
     
-    @IBAction func buttonClick(_: UIButton) {
+    @IBAction func buttonClicked(_ sender: UIButton) {
         navigationController?.pushViewController(EmarsysInboxController.new(), animated: true)
 //        present(EmarsysInboxController.get(), animated: true, completion: nil)
     }

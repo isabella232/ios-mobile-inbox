@@ -15,6 +15,7 @@ extension UIColor {
     static let defaultTableViewBackgroundColor = color(fromHexCode: 0xD1EEEEFF)
     static let defaultTableViewCellForegroundColor = black
     static let defaultTableViewCellTintColor = systemBlue
+    static let defaultActivityIndicatorColor = darkGray
     
     static func color(fromHexCode hex: UInt64) -> UIColor {
         let r = ((CGFloat)((hex & 0xFF000000) >> 24)) / 255.0
