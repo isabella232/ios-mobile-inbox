@@ -109,16 +109,15 @@ extension EmarsysInboxController {
     @objc func favImageViewClicked(_ sender: UIGestureRecognizer) {
         guard let index = sender.view?.tag, index < messages?.count ?? 0, let message = messages?[index] else { return }
         if let pinnedIndex = message.tags?.firstIndex(of: EmarsysInboxTag.pinned) {
+            message.tags?.remove(at: pinnedIndex)
 //            Emarsys.messageInbox.removeTag(EmarsysInboxTag.pinned, fromMessage: message.id) { [weak self] (error) in
-                message.tags?.remove(at: pinnedIndex)
-                self.tableView.reloadData()
 //            }
         } else {
+            message.tags?.append(EmarsysInboxTag.pinned)
 //            Emarsys.messageInbox.addTag(EmarsysInboxTag.pinned, forMessage: message.id) { [weak self] (error) in
-                message.tags?.append(EmarsysInboxTag.pinned)
-                self.tableView.reloadData()
 //            }
         }
+        tableView.reloadData()
     }
     
 }
