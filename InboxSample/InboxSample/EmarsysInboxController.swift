@@ -99,7 +99,7 @@ extension EmarsysInboxController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? EmarsysInboxDetailController,
             let tableViewCell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: tableViewCell) {
-            destination.initialIndex = indexPath.row
+            destination.initialIndexPath = indexPath
             destination.messages = messages
         }
     }

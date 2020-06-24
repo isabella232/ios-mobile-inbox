@@ -165,15 +165,43 @@
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Datetime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fh5-IK-WOg">
+                                                    <rect key="frame" x="20" y="52" width="260" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ykl-03-Y7s">
+                                                    <rect key="frame" x="20" y="80" width="260" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sfl-0C-olx">
+                                                    <rect key="frame" x="20" y="109.5" width="260" height="170.5"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="sfl-0C-olx" firstAttribute="leading" secondItem="dwk-68-pYS" secondAttribute="leading" id="1ak-gD-UBj"/>
+                                                <constraint firstItem="Ykl-03-Y7s" firstAttribute="top" secondItem="Fh5-IK-WOg" secondAttribute="bottom" constant="8" symbolic="YES" id="Fa2-56-PlC"/>
+                                                <constraint firstItem="Ykl-03-Y7s" firstAttribute="leading" secondItem="dwk-68-pYS" secondAttribute="leading" id="LUo-90-cHT"/>
+                                                <constraint firstItem="Fh5-IK-WOg" firstAttribute="leading" secondItem="dwk-68-pYS" secondAttribute="leading" id="OKZ-bh-xUO"/>
+                                                <constraint firstItem="Fh5-IK-WOg" firstAttribute="trailing" secondItem="dwk-68-pYS" secondAttribute="trailing" id="QJQ-6Q-SsE"/>
+                                                <constraint firstItem="Fh5-IK-WOg" firstAttribute="top" secondItem="dwk-68-pYS" secondAttribute="bottom" constant="8" symbolic="YES" id="Rta-AB-QrV"/>
                                                 <constraint firstAttribute="trailing" secondItem="dwk-68-pYS" secondAttribute="trailing" constant="20" symbolic="YES" id="aOy-Dq-7Gk"/>
                                                 <constraint firstItem="dwk-68-pYS" firstAttribute="top" secondItem="yzz-LW-PA7" secondAttribute="top" constant="20" symbolic="YES" id="dvg-dJ-9Uh"/>
+                                                <constraint firstItem="sfl-0C-olx" firstAttribute="trailing" secondItem="dwk-68-pYS" secondAttribute="trailing" id="hoC-c4-NAr"/>
+                                                <constraint firstItem="Ykl-03-Y7s" firstAttribute="trailing" secondItem="dwk-68-pYS" secondAttribute="trailing" id="lIm-HY-hzf"/>
+                                                <constraint firstItem="sfl-0C-olx" firstAttribute="top" secondItem="Ykl-03-Y7s" secondAttribute="bottom" constant="8" symbolic="YES" id="mn2-Ue-Kvw"/>
                                                 <constraint firstItem="dwk-68-pYS" firstAttribute="leading" secondItem="yzz-LW-PA7" secondAttribute="leading" constant="20" symbolic="YES" id="p4F-Zn-Dd6"/>
+                                                <constraint firstAttribute="bottom" secondItem="sfl-0C-olx" secondAttribute="bottom" constant="20" symbolic="YES" id="uxt-qY-Yuz"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="300" height="300"/>
                                         <connections>
+                                            <outlet property="bodyLabel" destination="Ykl-03-Y7s" id="biJ-J7-zQ2"/>
+                                            <outlet property="datetimeLabel" destination="Fh5-IK-WOg" id="KTM-Ta-Ych"/>
+                                            <outlet property="imageView" destination="sfl-0C-olx" id="3VJ-7o-ZFb"/>
                                             <outlet property="titleLabel" destination="dwk-68-pYS" id="cJ4-B1-dDN"/>
                                         </connections>
                                     </collectionViewCell>
