@@ -46,7 +46,7 @@ class EmarsysInboxController: UIViewController {
         Emarsys.messageInbox.fetchMessages { [weak self] (result, error) in
             self?.activityIndicatorView.stopAnimating()
             self?.refreshControl.endRefreshing()
-            self?.messages = result?.messages
+            self?.messages = result?.messages.filter({ !($0.tags?.contains(EmarsysInboxTag.deleted) ?? false) })
             self?.isFetchingMessages = false
             self?.tableView.reloadData()
         }
@@ -90,6 +90,16 @@ extension EmarsysInboxController: UITableViewDataSource, UITableViewDelegate {
             .string(from: Date(timeIntervalSince1970: TimeInterval(truncating: message.receivedAt)))
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard indexPath.row < messages?.count ?? 0, let message = messages?[indexPath.row] else { return }
+        if editingStyle == .delete {
+            Emarsys.messageInbox.addTag(EmarsysInboxTag.deleted, forMessage: message.id)
+            messages?.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+        }
     }
     
 }
