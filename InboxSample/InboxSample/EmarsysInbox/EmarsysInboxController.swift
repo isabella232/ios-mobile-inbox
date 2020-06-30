@@ -77,13 +77,15 @@ extension EmarsysInboxController: UITableViewDataSource, UITableViewDelegate {
                 UITapGestureRecognizer(target: self, action: #selector(favImageViewClicked)))
         }
         
-        cell.favImageView?.tintColor = EmarsysInboxConfig.bodyTintColor
         cell.titleLabel.textColor = EmarsysInboxConfig.bodyForegroundColor
         cell.datetimeLabel.textColor = EmarsysInboxConfig.bodyForegroundColor
         
         guard indexPath.row < messages?.count ?? 0, let message = messages?[indexPath.row] else { return cell }
         cell.favImageView?.image = message.tags?.contains(EmarsysInboxTag.pinned) ?? false ?
             EmarsysInboxConfig.favImageOn : EmarsysInboxConfig.favImageOff
+        cell.favImageView?.tintColor = message.tags?.contains(EmarsysInboxTag.pinned) ?? false ?
+            EmarsysInboxConfig.bodyHighlightTintColor : EmarsysInboxConfig.bodyTintColor
+        
         cell.titleLabel.text = message.title
         cell.datetimeLabel.text = DateFormatter.yyyyMMddHHmm
             .string(from: Date(timeIntervalSince1970: TimeInterval(truncating: message.receivedAt)))

@@ -15,6 +15,7 @@ struct EmarsysInboxConfig {
     public static var bodyBackgroundColor: UIColor? = .color(fromHexCode: 0xD1EEEEFF)
     public static var bodyForegroundColor: UIColor? = .black
     public static var bodyTintColor: UIColor? = .systemBlue
+    public static var bodyHighlightTintColor: UIColor? = .color(fromHexCode: 0xFFD700FF)
     public static var activityIndicatorColor: UIColor? = .darkGray
     public static var favImageOff: UIImage? = UIImage(systemName: "star") // todo change to image support <ios13
     public static var favImageOn: UIImage? = UIImage(systemName: "star.fill")
