@@ -72,7 +72,6 @@ extension EmarsysInboxController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(
             withIdentifier: EmarsysInboxTableViewCell.id, for: indexPath) as! EmarsysInboxTableViewCell
         
-        cell.favImageView?.tag = indexPath.row
         if cell.favImageView?.gestureRecognizers?.isEmpty ?? true {
             cell.favImageView?.addGestureRecognizer(
                 UITapGestureRecognizer(target: self, action: #selector(favImageViewClicked)))
@@ -98,7 +97,6 @@ extension EmarsysInboxController: UITableViewDataSource, UITableViewDelegate {
             Emarsys.messageInbox.addTag(EmarsysInboxTag.deleted, forMessage: message.id)
             messages?.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-            
         }
     }
     
@@ -115,7 +113,9 @@ extension EmarsysInboxController {
     }
     
     @objc func favImageViewClicked(_ sender: UIGestureRecognizer) {
-        guard let index = sender.view?.tag, index < messages?.count ?? 0, let message = messages?[index] else { return }
+        guard let cell = sender.view?.superview?.superview as? EmarsysInboxTableViewCell,
+            let indexPath = tableView.indexPath(for: cell),
+            indexPath.row < messages?.count ?? 0, let message = messages?[indexPath.row] else { return }
         if let pinnedIndex = message.tags?.firstIndex(of: EmarsysInboxTag.pinned) {
             message.tags?.remove(at: pinnedIndex)
 //            Emarsys.messageInbox.removeTag(EmarsysInboxTag.pinned, fromMessage: message.id) { [weak self] (error) in
