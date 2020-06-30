@@ -86,17 +86,10 @@
 		561E32992497D42C00FFBEAC /* InboxSample */ = {
 			isa = PBXGroup;
 			children = (
+				CC04A10024AB462E0084DCE4 /* EmarsysInbox */,
 				561E329A2497D42C00FFBEAC /* AppDelegate.swift */,
 				561E32A02497D42C00FFBEAC /* Main.storyboard */,
 				561E329E2497D42C00FFBEAC /* ViewController.swift */,
-				CC04A07E24A20A310084DCE4 /* EmarsysInboxConfig.swift */,
-				CCADD5C7249B0CD400B629E3 /* EmarsysInbox.storyboard */,
-				CCADD5C3249A05B900B629E3 /* EmarsysInboxController.swift */,
-				CCADD5BD2498AA0C00B629E3 /* EmarsysInboxTableViewCell.swift */,
-				CC04A07A24A1EA010084DCE4 /* EmarsysInboxDetailController.swift */,
-				CC04A07C24A206450084DCE4 /* EmarsysInboxDetailCollectionViewCell.swift */,
-				CC04A07824A1D6910084DCE4 /* EmarsysInboxTag.swift */,
-				CCADD5C12499F31C00B629E3 /* EmarsysInboxExtensions.swift */,
 				561E32A32497D42E00FFBEAC /* Assets.xcassets */,
 				561E32A52497D42E00FFBEAC /* LaunchScreen.storyboard */,
 				561E32A82497D42E00FFBEAC /* Info.plist */,
@@ -110,6 +103,21 @@
 				056F22F2A574BFBDC6819A02 /* Pods_InboxSample.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC04A10024AB462E0084DCE4 /* EmarsysInbox */ = {
+			isa = PBXGroup;
+			children = (
+				CC04A07E24A20A310084DCE4 /* EmarsysInboxConfig.swift */,
+				CCADD5C7249B0CD400B629E3 /* EmarsysInbox.storyboard */,
+				CCADD5C3249A05B900B629E3 /* EmarsysInboxController.swift */,
+				CCADD5BD2498AA0C00B629E3 /* EmarsysInboxTableViewCell.swift */,
+				CC04A07A24A1EA010084DCE4 /* EmarsysInboxDetailController.swift */,
+				CC04A07C24A206450084DCE4 /* EmarsysInboxDetailCollectionViewCell.swift */,
+				CC04A07824A1D6910084DCE4 /* EmarsysInboxTag.swift */,
+				CCADD5C12499F31C00B629E3 /* EmarsysInboxExtensions.swift */,
+			);
+			path = EmarsysInbox;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
