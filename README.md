@@ -1,7 +1,10 @@
 # ios-mobile-inbox
 
 ## Setup
-1. Copy the folder EmarsysInbox into your project
+1. Cocoapods
+```
+pod 'EmarsysInbox', :git => 'https://github.com/emartech/ios-mobile-inbox.git'
+```
 2. Init EmarsysInboxController with new()
 ```
 navigationController?.pushViewController(EmarsysInboxController.new(), animated: true)
@@ -31,7 +34,5 @@ var favImageOff: UIImage?
 
 var favImageOn: UIImage?
 
+## Screenshots
 ![Sample](sample.png)
-
-## ToDo
-Make the project available on Cocoapod
