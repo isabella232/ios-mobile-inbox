@@ -1,8 +1,4 @@
 //
-//  EmarsysInboxTag.swift
-//  InboxSample
-//
-//  Created by Bianca Lui on 23/6/2020.
 //  Copyright © 2020 Emarsys. All rights reserved.
 //
 

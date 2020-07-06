@@ -32,14 +32,6 @@
 		561E32A32497D42E00FFBEAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		561E32A62497D42E00FFBEAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		561E32A82497D42E00FFBEAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CC04A07824A1D6910084DCE4 /* EmarsysInboxTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmarsysInboxTag.swift; sourceTree = "<group>"; };
-		CC04A07A24A1EA010084DCE4 /* EmarsysInboxDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmarsysInboxDetailController.swift; sourceTree = "<group>"; };
-		CC04A07C24A206450084DCE4 /* EmarsysInboxDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmarsysInboxDetailCollectionViewCell.swift; sourceTree = "<group>"; };
-		CC04A07E24A20A310084DCE4 /* EmarsysInboxConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmarsysInboxConfig.swift; sourceTree = "<group>"; };
-		CCADD5BD2498AA0C00B629E3 /* EmarsysInboxTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmarsysInboxTableViewCell.swift; sourceTree = "<group>"; };
-		CCADD5C12499F31C00B629E3 /* EmarsysInboxExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmarsysInboxExtensions.swift; sourceTree = "<group>"; };
-		CCADD5C3249A05B900B629E3 /* EmarsysInboxController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmarsysInboxController.swift; sourceTree = "<group>"; };
-		CCADD5C7249B0CD400B629E3 /* EmarsysInbox.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmarsysInbox.storyboard; sourceTree = "<group>"; };
 		E7BD024D22B5C08E3B5831F0 /* Pods-InboxSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InboxSample.release.xcconfig"; path = "Target Support Files/Pods-InboxSample/Pods-InboxSample.release.xcconfig"; sourceTree = "<group>"; };
 		EFF9BE548E33021C6DF52CE3 /* Pods-InboxSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InboxSample.debug.xcconfig"; path = "Target Support Files/Pods-InboxSample/Pods-InboxSample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,7 +78,6 @@
 		561E32992497D42C00FFBEAC /* InboxSample */ = {
 			isa = PBXGroup;
 			children = (
-				CC04A10024AB462E0084DCE4 /* EmarsysInbox */,
 				561E329A2497D42C00FFBEAC /* AppDelegate.swift */,
 				561E32A02497D42C00FFBEAC /* Main.storyboard */,
 				561E329E2497D42C00FFBEAC /* ViewController.swift */,
@@ -103,21 +94,6 @@
 				056F22F2A574BFBDC6819A02 /* Pods_InboxSample.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CC04A10024AB462E0084DCE4 /* EmarsysInbox */ = {
-			isa = PBXGroup;
-			children = (
-				CC04A07E24A20A310084DCE4 /* EmarsysInboxConfig.swift */,
-				CCADD5C7249B0CD400B629E3 /* EmarsysInbox.storyboard */,
-				CCADD5C3249A05B900B629E3 /* EmarsysInboxController.swift */,
-				CCADD5BD2498AA0C00B629E3 /* EmarsysInboxTableViewCell.swift */,
-				CC04A07A24A1EA010084DCE4 /* EmarsysInboxDetailController.swift */,
-				CC04A07C24A206450084DCE4 /* EmarsysInboxDetailCollectionViewCell.swift */,
-				CC04A07824A1D6910084DCE4 /* EmarsysInboxTag.swift */,
-				CCADD5C12499F31C00B629E3 /* EmarsysInboxExtensions.swift */,
-			);
-			path = EmarsysInbox;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,7 +158,6 @@
 			files = (
 				561E32A72497D42E00FFBEAC /* LaunchScreen.storyboard in Resources */,
 				561E32A42497D42E00FFBEAC /* Assets.xcassets in Resources */,
-				CCADD5C8249B0CD400B629E3 /* EmarsysInbox.storyboard in Resources */,
 				561E32A22497D42C00FFBEAC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,15 +211,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC04A07924A1D6910084DCE4 /* EmarsysInboxTag.swift in Sources */,
-				CC04A07B24A1EA010084DCE4 /* EmarsysInboxDetailController.swift in Sources */,
-				CCADD5C22499F31C00B629E3 /* EmarsysInboxExtensions.swift in Sources */,
-				CC04A07D24A206450084DCE4 /* EmarsysInboxDetailCollectionViewCell.swift in Sources */,
 				561E329F2497D42C00FFBEAC /* ViewController.swift in Sources */,
-				CCADD5BE2498AA0C00B629E3 /* EmarsysInboxTableViewCell.swift in Sources */,
-				CC04A07F24A20A310084DCE4 /* EmarsysInboxConfig.swift in Sources */,
 				561E329B2497D42C00FFBEAC /* AppDelegate.swift in Sources */,
-				CCADD5C4249A05B900B629E3 /* EmarsysInboxController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,7 +364,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ems.InboxSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emarsys.inboxSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -415,7 +383,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ems.InboxSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emarsys.inboxSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

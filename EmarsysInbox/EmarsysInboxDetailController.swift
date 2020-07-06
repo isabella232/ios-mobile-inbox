@@ -1,8 +1,4 @@
 //
-//  EmarsysInboxDetailController.swift
-//  InboxSample
-//
-//  Created by Bianca Lui on 23/6/2020.
 //  Copyright © 2020 Emarsys. All rights reserved.
 //
 
@@ -67,7 +63,7 @@ extension EmarsysInboxDetailController: UICollectionViewDataSource, UICollection
         
         guard let imageUrl = message.imageUrl, let url = URL(string: imageUrl) else { return cell }
         cell.imageUrl = imageUrl
-        URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
+        URLSession.shared.dataTask(with: url) { data, response, error in
             guard let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200, error == nil,
                 let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
                 let data = data, let image = UIImage(data: data) else { return }

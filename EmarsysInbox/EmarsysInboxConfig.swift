@@ -1,14 +1,10 @@
 //
-//  EmarsysInboxConfig.swift
-//  InboxSample
-//
-//  Created by Bianca Lui on 23/6/2020.
 //  Copyright © 2020 Emarsys. All rights reserved.
 //
 
 import UIKit
 
-struct EmarsysInboxConfig {
+public struct EmarsysInboxConfig {
     
     public static var headerBackgroundColor: UIColor? = .color(fromHexCode: 0x5F9F9FFF)
     public static var headerForegroundColor: UIColor? = .white

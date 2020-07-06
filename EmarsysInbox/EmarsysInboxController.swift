@@ -1,18 +1,14 @@
 //
-//  EmarsysInboxController.swift
-//  InboxSample
-//
-//  Created by Bianca Lui on 17/6/2020.
 //  Copyright © 2020 Emarsys. All rights reserved.
 //
 
 import UIKit
 import EmarsysSDK
 
-class EmarsysInboxController: UIViewController {
+public class EmarsysInboxController: UIViewController {
     
-    static func new() -> UIViewController {
-        return UIStoryboard.init(name: "EmarsysInbox", bundle: nil)
+    public static func new() -> UIViewController {
+        return UIStoryboard.init(name: "EmarsysInbox", bundle: Bundle(for: self))
             .instantiateViewController(withIdentifier: "EmarsysInboxController")
     }
     
@@ -25,7 +21,7 @@ class EmarsysInboxController: UIViewController {
     var messages: [EMSMessage]?
     var isFetchingMessages = false
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         
         headerView.backgroundColor = EmarsysInboxConfig.headerBackgroundColor
@@ -56,11 +52,11 @@ class EmarsysInboxController: UIViewController {
 
 extension EmarsysInboxController: UITableViewDataSource, UITableViewDelegate {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messages?.count ?? 0
     }
     
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         guard indexPath.row < messages?.count ?? 0, let message = messages?[indexPath.row],
             !(message.tags?.contains(EmarsysInboxTag.seen) ?? false) else { return }
 //        Emarsys.messageInbox.addTag(EmarsysInboxTag.seen, forMessage: message.id) { [weak self] (error) in
@@ -68,7 +64,7 @@ extension EmarsysInboxController: UITableViewDataSource, UITableViewDelegate {
 //        }
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(
             withIdentifier: EmarsysInboxTableViewCell.id, for: indexPath) as! EmarsysInboxTableViewCell
         
@@ -93,7 +89,7 @@ extension EmarsysInboxController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         guard indexPath.row < messages?.count ?? 0, let message = messages?[indexPath.row] else { return }
         if editingStyle == .delete {
             Emarsys.messageInbox.addTag(EmarsysInboxTag.deleted, forMessage: message.id)
@@ -106,7 +102,7 @@ extension EmarsysInboxController: UITableViewDataSource, UITableViewDelegate {
 
 extension EmarsysInboxController {
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? EmarsysInboxDetailController,
             let tableViewCell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: tableViewCell) {
             destination.initialIndexPath = indexPath

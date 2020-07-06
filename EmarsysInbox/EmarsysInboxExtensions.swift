@@ -1,8 +1,4 @@
 //
-//  EmarsysInboxExtensions.swift
-//  InboxSample
-//
-//  Created by Bianca Lui on 17/6/2020.
 //  Copyright © 2020 Emarsys. All rights reserved.
 //
 

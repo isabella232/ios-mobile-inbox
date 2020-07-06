@@ -1,0 +1,16 @@
+PODS:
+  - EmarsysSDK (2.5.2)
+
+DEPENDENCIES:
+  - EmarsysSDK
+
+SPEC REPOS:
+  trunk:
+    - EmarsysSDK
+
+SPEC CHECKSUMS:
+  EmarsysSDK: 26c0767a56ef078cd1efefc2759c9d2fe105a79c
+
+PODFILE CHECKSUM: dbdcc902052161b0120354419a5ab1c62a3f973b
+
+COCOAPODS: 1.9.0

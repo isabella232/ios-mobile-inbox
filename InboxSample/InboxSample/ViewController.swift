@@ -4,6 +4,7 @@
 
 import UIKit
 import EmarsysSDK
+import EmarsysInbox
 
 class ViewController: UIViewController {
     
