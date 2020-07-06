@@ -4,7 +4,7 @@
 
 import UIKit
 
-public struct EmarsysInboxConfig {
+public class EmarsysInboxConfig {
     
     public static var headerBackgroundColor: UIColor? = .color(fromHexCode: 0x5F9F9FFF)
     public static var headerForegroundColor: UIColor? = .white
@@ -13,7 +13,7 @@ public struct EmarsysInboxConfig {
     public static var bodyTintColor: UIColor? = .systemBlue
     public static var bodyHighlightTintColor: UIColor? = .color(fromHexCode: 0xFFD700FF)
     public static var activityIndicatorColor: UIColor? = .darkGray
-    public static var favImageOff: UIImage? = UIImage(systemName: "star") // todo change to image support <ios13
-    public static var favImageOn: UIImage? = UIImage(systemName: "star.fill")
+    public static var favImageOff: UIImage? = UIImage(named: "star", in: Bundle(for: EmarsysInboxConfig.self), compatibleWith: nil)
+    public static var favImageOn: UIImage? = UIImage(named: "star.fill", in: Bundle(for: EmarsysInboxConfig.self), compatibleWith: nil)
     
 }

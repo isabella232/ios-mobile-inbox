@@ -11,7 +11,7 @@
         <!--Emarsys Inbox Controller-->
         <scene sceneID="qBk-Eg-bXp">
             <objects>
-                <viewController storyboardIdentifier="EmarsysInboxController" id="3LT-0e-heG" customClass="EmarsysInboxController" customModule="InboxSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EmarsysInboxController" id="3LT-0e-heG" customClass="EmarsysInboxController" customModule="EmarsysInbox" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i2c-b1-7mo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,31 +39,31 @@
                                 <color key="backgroundColor" red="0.81960784310000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="separatorInset" minX="80" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="EmarsysInboxTableViewCell" rowHeight="80" id="1lk-Af-aEe" customClass="EmarsysInboxTableViewCell" customModule="InboxSample" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="EmarsysInboxTableViewCell" rowHeight="80" id="1lk-Af-aEe" customClass="EmarsysInboxTableViewCell" customModule="EmarsysInbox" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1lk-Af-aEe" id="DRa-DM-bKe">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oif-dF-ng2">
-                                                    <rect key="frame" x="20" y="20" width="40" height="40"/>
+                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="oif-dF-ng2">
+                                                    <rect key="frame" x="20" y="25" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="oif-dF-ng2" secondAttribute="height" id="6vc-wn-868"/>
-                                                        <constraint firstAttribute="height" constant="40" id="8Bb-qK-MOv"/>
+                                                        <constraint firstAttribute="height" constant="30" id="8Bb-qK-MOv"/>
                                                     </constraints>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MUT-IZ-idZ">
-                                                    <rect key="frame" x="80" y="15" width="314" height="50"/>
+                                                    <rect key="frame" x="70" y="15" width="324" height="50"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UmX-1g-xiv">
-                                                            <rect key="frame" x="0.0" y="0.0" width="314" height="22"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="324" height="22"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Datetime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Jn-no-g7Z">
-                                                            <rect key="frame" x="0.0" y="30" width="314" height="20"/>
+                                                            <rect key="frame" x="0.0" y="30" width="324" height="20"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -137,7 +137,7 @@
         <!--Emarsys Inbox Detail Controller-->
         <scene sceneID="Sfm-sN-F7w">
             <objects>
-                <viewController storyboardIdentifier="EmarsysInboxDetailController" id="sRq-AI-qrZ" customClass="EmarsysInboxDetailController" customModule="InboxSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EmarsysInboxDetailController" id="sRq-AI-qrZ" customClass="EmarsysInboxDetailController" customModule="EmarsysInbox" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QhT-x5-Tep">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -152,7 +152,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EmarsysInboxDetailCollectionViewCell" id="agR-og-tpY" customClass="EmarsysInboxDetailCollectionViewCell" customModule="InboxSample" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EmarsysInboxDetailCollectionViewCell" id="agR-og-tpY" customClass="EmarsysInboxDetailCollectionViewCell" customModule="EmarsysInbox" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yzz-LW-PA7">
@@ -236,6 +236,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="star" width="128" height="128"/>
     </resources>
 </document>

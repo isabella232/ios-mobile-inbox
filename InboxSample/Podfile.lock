@@ -1,5 +1,5 @@
 PODS:
-  - EmarsysInbox (0.0.1):
+  - EmarsysInbox (1.0.0):
     - EmarsysSDK
   - EmarsysSDK (2.5.1)
 
@@ -15,9 +15,9 @@ EXTERNAL SOURCES:
     :path: ".."
 
 SPEC CHECKSUMS:
-  EmarsysInbox: 0c0658ee57fa243057f577bc6932d25c8a352a39
+  EmarsysInbox: 5e0ff0a281d39347618318f79ef5bbf7e4074ed2
   EmarsysSDK: b51fbaca87129c1f84d814e3d6e89068e84216ff
 
-PODFILE CHECKSUM: 771dfb20c22f078192eb35337824f595c0313776
+PODFILE CHECKSUM: 7abb0560843dceb445803f57f1a171654c704a0e
 
 COCOAPODS: 1.9.0

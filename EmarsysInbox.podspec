@@ -6,10 +6,11 @@ Pod::Spec.new do |spec|
   spec.homepage     = "https://github.com/emartech/ios-mobile-inbox"
   spec.license      = "Mozilla Public License 2.0"
   spec.author       = { "Emarsys Technologies" => "mobile.engineers@emarsys.com" }
-  spec.platform     = :ios, "13.0"
+  spec.platform     = :ios, "11.0"
   spec.source       = { :git => "https://github.com/emartech/ios-mobile-inbox.git", :tag => "#{spec.version}" }
-  spec.source_files = [ "EmarsysInbox", "EmarsysInbox/**/*.storyboard" ]
-  
+  spec.source_files = [ "EmarsysInbox" ]
+  spec.resources    = [ "EmarsysInbox/**/*.{storyboard,xcassets}" ]
+
   spec.dependency "EmarsysSDK"
 
 end
