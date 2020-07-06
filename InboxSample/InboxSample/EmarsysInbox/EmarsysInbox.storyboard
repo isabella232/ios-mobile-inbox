@@ -178,7 +178,11 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sfl-0C-olx">
-                                                    <rect key="frame" x="20" y="109.5" width="260" height="170.5"/>
+                                                    <rect key="frame" x="20" y="109.5" width="260" height="0.0"/>
+                                                    <color key="backgroundColor" red="0.1960784314" green="0.81960784310000001" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" secondItem="sfl-0C-olx" secondAttribute="width" multiplier="0.0001" id="1jR-mI-rV6"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -194,7 +198,6 @@
                                                 <constraint firstItem="Ykl-03-Y7s" firstAttribute="trailing" secondItem="dwk-68-pYS" secondAttribute="trailing" id="lIm-HY-hzf"/>
                                                 <constraint firstItem="sfl-0C-olx" firstAttribute="top" secondItem="Ykl-03-Y7s" secondAttribute="bottom" constant="8" symbolic="YES" id="mn2-Ue-Kvw"/>
                                                 <constraint firstItem="dwk-68-pYS" firstAttribute="leading" secondItem="yzz-LW-PA7" secondAttribute="leading" constant="20" symbolic="YES" id="p4F-Zn-Dd6"/>
-                                                <constraint firstAttribute="bottom" secondItem="sfl-0C-olx" secondAttribute="bottom" constant="20" symbolic="YES" id="uxt-qY-Yuz"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="300" height="300"/>
@@ -202,6 +205,7 @@
                                             <outlet property="bodyLabel" destination="Ykl-03-Y7s" id="biJ-J7-zQ2"/>
                                             <outlet property="datetimeLabel" destination="Fh5-IK-WOg" id="KTM-Ta-Ych"/>
                                             <outlet property="imageView" destination="sfl-0C-olx" id="3VJ-7o-ZFb"/>
+                                            <outlet property="imageViewAspectRatio" destination="1jR-mI-rV6" id="BBg-Gt-sxq"/>
                                             <outlet property="titleLabel" destination="dwk-68-pYS" id="cJ4-B1-dDN"/>
                                         </connections>
                                     </collectionViewCell>

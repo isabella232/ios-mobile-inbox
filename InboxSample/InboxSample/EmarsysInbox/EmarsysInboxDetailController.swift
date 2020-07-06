@@ -56,6 +56,7 @@ extension EmarsysInboxDetailController: UICollectionViewDataSource, UICollection
         cell.bodyLabel.textColor = EmarsysInboxConfig.bodyForegroundColor
         
         cell.imageView.image = nil
+        cell.imageViewAspectRatio.constant = 0
         cell.imageUrl = nil
         
         guard indexPath.row < messages?.count ?? 0, let message = messages?[indexPath.row] else { return cell }
@@ -71,9 +72,9 @@ extension EmarsysInboxDetailController: UICollectionViewDataSource, UICollection
                 let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
                 let data = data, let image = UIImage(data: data) else { return }
             DispatchQueue.main.async() {
-                guard let cell = self?.collectionView.cellForItem(at: indexPath) as? EmarsysInboxDetailCollectionViewCell,
-                    cell.imageUrl == imageUrl else { return }
+                guard cell.imageUrl == imageUrl else { return }
                 cell.imageView.image = image
+                cell.imageViewAspectRatio.constant = image.size.height / image.size.width * cell.imageView.bounds.width
             }
         }.resume()
         

@@ -16,6 +16,7 @@ class EmarsysInboxDetailCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var datetimeLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageViewAspectRatio: NSLayoutConstraint!
     
     var imageUrl: String?
     
