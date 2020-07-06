@@ -13,14 +13,6 @@
 		561E32A42497D42E00FFBEAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 561E32A32497D42E00FFBEAC /* Assets.xcassets */; };
 		561E32A72497D42E00FFBEAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561E32A52497D42E00FFBEAC /* LaunchScreen.storyboard */; };
 		5A23426AAA267BA0A5A0009A /* Pods_InboxSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 056F22F2A574BFBDC6819A02 /* Pods_InboxSample.framework */; };
-		CC04A07924A1D6910084DCE4 /* EmarsysInboxTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC04A07824A1D6910084DCE4 /* EmarsysInboxTag.swift */; };
-		CC04A07B24A1EA010084DCE4 /* EmarsysInboxDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC04A07A24A1EA010084DCE4 /* EmarsysInboxDetailController.swift */; };
-		CC04A07D24A206450084DCE4 /* EmarsysInboxDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC04A07C24A206450084DCE4 /* EmarsysInboxDetailCollectionViewCell.swift */; };
-		CC04A07F24A20A310084DCE4 /* EmarsysInboxConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC04A07E24A20A310084DCE4 /* EmarsysInboxConfig.swift */; };
-		CCADD5BE2498AA0C00B629E3 /* EmarsysInboxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADD5BD2498AA0C00B629E3 /* EmarsysInboxTableViewCell.swift */; };
-		CCADD5C22499F31C00B629E3 /* EmarsysInboxExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADD5C12499F31C00B629E3 /* EmarsysInboxExtensions.swift */; };
-		CCADD5C4249A05B900B629E3 /* EmarsysInboxController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADD5C3249A05B900B629E3 /* EmarsysInboxController.swift */; };
-		CCADD5C8249B0CD400B629E3 /* EmarsysInbox.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCADD5C7249B0CD400B629E3 /* EmarsysInbox.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
