@@ -59,8 +59,8 @@ extension EmarsysInboxController: UITableViewDataSource, UITableViewDelegate {
     public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         guard indexPath.row < messages?.count ?? 0, let message = messages?[indexPath.row],
             !(message.tags?.contains(EmarsysInboxTag.seen) ?? false) else { return }
+        message.tags?.append(EmarsysInboxTag.seen)
 //        Emarsys.messageInbox.addTag(EmarsysInboxTag.seen, forMessage: message.id) { [weak self] (error) in
-            message.tags?.append(EmarsysInboxTag.seen)
 //        }
     }
     
@@ -92,7 +92,7 @@ extension EmarsysInboxController: UITableViewDataSource, UITableViewDelegate {
     public func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         guard indexPath.row < messages?.count ?? 0, let message = messages?[indexPath.row] else { return }
         if editingStyle == .delete {
-            Emarsys.messageInbox.addTag(EmarsysInboxTag.deleted, forMessage: message.id)
+//            Emarsys.messageInbox.addTag(EmarsysInboxTag.deleted, forMessage: message.id)
             messages?.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
