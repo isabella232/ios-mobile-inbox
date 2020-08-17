@@ -6,16 +6,17 @@
 pod 'EmarsysInbox', :git => 'https://github.com/emartech/ios-mobile-inbox.git'
 ```
 2. Init EmarsysInboxController with new()
-```
+```swift
 navigationController?.pushViewController(EmarsysInboxController.new(), animated: true)
 ```
 
 ## Configurable variables
 You may customize the view with the static variables in `EmarsysInboxConfig` .
-```
+```swift
 EmarsysInboxConfig.bodyForegroundColor = .black
 ```
 
+```swift
 var headerBackgroundColor: UIColor?
 
 var headerForegroundColor: UIColor?
@@ -33,6 +34,7 @@ var activityIndicatorColor: UIColor?
 var favImageOff: UIImage?
 
 var favImageOn: UIImage?
+```
 
 ## Screenshots
 ![Sample](sample.png)
