@@ -1,13 +1,13 @@
 PODS:
   - EmarsysInbox (1.0.0):
     - EmarsysSDK
-  - EmarsysSDK (2.5.1)
+  - EmarsysSDK (2.7.1)
 
 DEPENDENCIES:
   - EmarsysInbox (from `..`)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
     - EmarsysSDK
 
 EXTERNAL SOURCES:
@@ -16,7 +16,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   EmarsysInbox: 5e0ff0a281d39347618318f79ef5bbf7e4074ed2
-  EmarsysSDK: b51fbaca87129c1f84d814e3d6e89068e84216ff
+  EmarsysSDK: 6289f3ef447eead6fceeb8a56d7ef54421d7ab13
 
 PODFILE CHECKSUM: 7abb0560843dceb445803f57f1a171654c704a0e
 
