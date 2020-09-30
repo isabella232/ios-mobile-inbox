@@ -90,7 +90,7 @@ extension EmarsysInboxController: UITableViewDataSource, UITableViewDelegate {
         if let url = message.imageUrl {
             cell.messageImageView.downloaded(from: url)
         } else {
-            cell.messageImageView.isHidden = true
+            cell.messageImageView.image = EmarsysInboxConfig.defaultImage
         }
         
 //        cell.datetimeLabel.text = DateFormatter.yyyyMMddHHmm

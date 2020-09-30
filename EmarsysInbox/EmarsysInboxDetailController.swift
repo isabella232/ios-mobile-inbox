@@ -59,7 +59,10 @@ extension EmarsysInboxDetailController: UICollectionViewDataSource, UICollection
             .string(from: Date(timeIntervalSince1970: TimeInterval(truncating: message.receivedAt)))
         cell.bodyLabel.text = message.body
         
-        guard let imageUrl = message.imageUrl, let url = URL(string: imageUrl) else { return cell }
+        guard let imageUrl = message.imageUrl, let url = URL(string: imageUrl) else {
+            cell.imageView.image = EmarsysInboxConfig.defaultImage
+            return cell
+        }
         cell.imageUrl = imageUrl
         cell.imageView.downloaded(from: url)
         
