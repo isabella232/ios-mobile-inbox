@@ -23,9 +23,6 @@ class EmarsysInboxDetailController: UIViewController {
         
         guard !initialized, let ip = initialIndexPath else { return }
         initialized = true
-        collectionView.delegate = self
-        collectionView.reloadData()
-        collectionView.layoutIfNeeded()
         collectionView.scrollToItem(at: ip, at: .left, animated: false)
     }
     
@@ -58,8 +55,14 @@ extension EmarsysInboxDetailController: UICollectionViewDataSource, UICollection
         
         guard indexPath.row < messages?.count ?? 0, let message = messages?[indexPath.row] else { return cell }
         cell.titleLabel.text = message.title
-        cell.datetimeLabel.text = DateFormatter.yyyyMMddHHmm
-            .string(from: Date(timeIntervalSince1970: TimeInterval(truncating: message.receivedAt)))
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:MM - dd MMM YYY"
+        dateFormatter.locale = Locale.current
+        let date = Date(timeIntervalSince1970: TimeInterval(truncating: message.receivedAt))
+        let formattedDate = dateFormatter.string(from: date)
+        
+        cell.datetimeLabel.text = formattedDate
         cell.bodyLabel.text = message.body
         
         guard let imageUrl = message.imageUrl, let url = URL(string: imageUrl) else {
