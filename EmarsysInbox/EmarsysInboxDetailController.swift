@@ -23,6 +23,9 @@ class EmarsysInboxDetailController: UIViewController {
         
         guard !initialized, let ip = initialIndexPath else { return }
         initialized = true
+        collectionView.delegate = self
+        collectionView.reloadData()
+        collectionView.layoutIfNeeded()
         collectionView.scrollToItem(at: ip, at: .left, animated: false)
     }
     
@@ -70,7 +73,7 @@ extension EmarsysInboxDetailController: UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return collectionView.bounds.size
+        return CGSize(width: view.frame.width , height: view.frame.height - (view.safeAreaInsets.top + view.safeAreaInsets.bottom))
     }
     
 }
