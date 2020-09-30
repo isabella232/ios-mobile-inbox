@@ -73,17 +73,29 @@ extension EmarsysInboxController: UITableViewDataSource, UITableViewDelegate {
         }
         
         cell.titleLabel.textColor = EmarsysInboxConfig.bodyForegroundColor
-        cell.datetimeLabel.textColor = EmarsysInboxConfig.bodyForegroundColor
+        cell.bodyLabel.textColor = EmarsysInboxConfig.bodyForegroundColor
+        cell.favView.backgroundColor = EmarsysInboxConfig.headerBackgroundColor
         
         guard indexPath.row < messages?.count ?? 0, let message = messages?[indexPath.row] else { return cell }
+        
         cell.favImageView?.image = message.tags?.contains(EmarsysInboxTag.pinned) ?? false ?
             EmarsysInboxConfig.favImageOn : EmarsysInboxConfig.favImageOff
         cell.favImageView?.tintColor = message.tags?.contains(EmarsysInboxTag.pinned) ?? false ?
             EmarsysInboxConfig.bodyHighlightTintColor : EmarsysInboxConfig.bodyTintColor
+        cell.favView.isHidden = message.tags?.contains(EmarsysInboxTag.pinned) ?? false ?
+            false : true
         
         cell.titleLabel.text = message.title
-        cell.datetimeLabel.text = DateFormatter.yyyyMMddHHmm
-            .string(from: Date(timeIntervalSince1970: TimeInterval(truncating: message.receivedAt)))
+        cell.bodyLabel.text = message.body
+        
+        if let url = message.imageUrl {
+            cell.messageImageView.downloaded(from: url)
+        } else {
+            cell.messageImageView.isHidden = true
+        }
+        
+//        cell.datetimeLabel.text = DateFormatter.yyyyMMddHHmm
+//            .string(from: Date(timeIntervalSince1970: TimeInterval(truncating: message.receivedAt)))
         
         return cell
     }
