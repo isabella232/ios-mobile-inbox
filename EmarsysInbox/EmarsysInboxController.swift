@@ -47,7 +47,6 @@ public class EmarsysInboxController: UIViewController {
             self?.tableView.reloadData()
         }
     }
-    
 }
 
 extension EmarsysInboxController: UITableViewDataSource, UITableViewDelegate {
