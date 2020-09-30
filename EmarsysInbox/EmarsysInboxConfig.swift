@@ -15,6 +15,7 @@ public class EmarsysInboxConfig {
     public static var activityIndicatorColor: UIColor? = .darkGray
     public static var favImageOff: UIImage? = UIImage(named: "star", in: Bundle(for: EmarsysInboxConfig.self), compatibleWith: nil)
     public static var favImageOn: UIImage? = UIImage(named: "star.fill", in: Bundle(for: EmarsysInboxConfig.self), compatibleWith: nil)
+    public static var favViewBackgroundColor: UIColor? = .color(fromHexCode: 0x5F9F9FFF)
     public static var defaultImage: UIImage? = UIImage(named: "emarsys", in: Bundle(for: EmarsysInboxConfig.self), compatibleWith: nil)
     
 }

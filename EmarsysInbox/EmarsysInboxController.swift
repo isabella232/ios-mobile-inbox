@@ -73,7 +73,7 @@ extension EmarsysInboxController: UITableViewDataSource, UITableViewDelegate {
         
         cell.titleLabel.textColor = EmarsysInboxConfig.bodyForegroundColor
         cell.bodyLabel.textColor = EmarsysInboxConfig.bodyForegroundColor
-        cell.favView.backgroundColor = EmarsysInboxConfig.headerBackgroundColor
+        cell.favView.backgroundColor = EmarsysInboxConfig.favViewBackgroundColor
         
         guard indexPath.row < messages?.count ?? 0, let message = messages?[indexPath.row] else { return cell }
         
