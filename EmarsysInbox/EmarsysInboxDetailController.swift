@@ -15,7 +15,6 @@ class EmarsysInboxDetailController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         collectionView.backgroundColor = EmarsysInboxConfig.bodyBackgroundColor
     }
     
@@ -51,7 +50,7 @@ extension EmarsysInboxDetailController: UICollectionViewDataSource, UICollection
         cell.bodyLabel.textColor = EmarsysInboxConfig.bodyForegroundColor
         
         cell.imageView.image = nil
-        cell.imageViewAspectRatio.constant = 0
+//        cell.imageViewAspectRatio.constant = 0
         cell.imageUrl = nil
         
         guard indexPath.row < messages?.count ?? 0, let message = messages?[indexPath.row] else { return cell }
@@ -62,16 +61,7 @@ extension EmarsysInboxDetailController: UICollectionViewDataSource, UICollection
         
         guard let imageUrl = message.imageUrl, let url = URL(string: imageUrl) else { return cell }
         cell.imageUrl = imageUrl
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            guard let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200, error == nil,
-                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
-                let data = data, let image = UIImage(data: data) else { return }
-            DispatchQueue.main.async() {
-                guard cell.imageUrl == imageUrl else { return }
-                cell.imageView.image = image
-                cell.imageViewAspectRatio.constant = image.size.height / image.size.width * cell.imageView.bounds.width
-            }
-        }.resume()
+        cell.imageView.downloaded(from: url)
         
         return cell
     }
