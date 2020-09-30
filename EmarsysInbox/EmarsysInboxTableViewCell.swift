@@ -14,4 +14,8 @@ class EmarsysInboxTableViewCell: UITableViewCell {
     @IBOutlet weak var bodyLabel: UILabel!
     @IBOutlet weak var messageImageView: UIImageView!
     
+    override func awakeFromNib() {
+        messageImageView.layer.cornerRadius = 15
+    }
+    
 }
