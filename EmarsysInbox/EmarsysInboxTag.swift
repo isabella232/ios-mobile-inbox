@@ -10,5 +10,6 @@ struct EmarsysInboxTag {
     static let opened = "opened"
     static let pinned = "pinned"
     static let deleted = "deleted"
+    static let high = "high"
     
 }
