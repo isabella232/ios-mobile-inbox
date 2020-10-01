@@ -47,6 +47,10 @@ public class EmarsysInboxController: UIViewController {
             self?.tableView.reloadData()
         }
     }
+    
+    public override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
 }
 
 extension EmarsysInboxController: UITableViewDataSource, UITableViewDelegate {
@@ -81,7 +85,8 @@ extension EmarsysInboxController: UITableViewDataSource, UITableViewDelegate {
             EmarsysInboxConfig.favImageOn : EmarsysInboxConfig.favImageOff
         cell.favImageView?.tintColor = message.tags?.contains(EmarsysInboxTag.pinned) ?? false ?
             EmarsysInboxConfig.bodyHighlightTintColor : EmarsysInboxConfig.bodyTintColor
-        cell.favView.isHidden = message.tags?.contains(EmarsysInboxTag.pinned) ?? false ?
+        cell.favView.isHidden = message.tags?.contains(EmarsysInboxTag.opened) ?? false ?
+            true : false
             false : true
         
         cell.titleLabel.text = message.title
