@@ -18,25 +18,51 @@ EmarsysInboxConfig.bodyForegroundColor = .black
 
 ```swift
 var headerBackgroundColor: UIColor?
+```
 
+```swift
 var headerForegroundColor: UIColor?
+```
 
+```swift
 var bodyBackgroundColor: UIColor?
+```
 
+```swift
 var bodyForegroundColor: UIColor?
+```
 
+```swift
 var bodyTintColor: UIColor?
+```
 
+```swift
 var bodyHighlightTintColor: UIColor?
+```
 
+```swift
 var activityIndicatorColor: UIColor?
+```
 
+```swift
 var favImageOff: UIImage?
+```
 
+```swift
 var favImageOn: UIImage?
+```
+
+```swift
+var notOpenedViewColor: UIColor?
+```
+
+```swift
+var defaultImage: UIImage?
+```
+
+```swift
+var highPriorityImage: UIImage?
 ```
 
 ## Screenshots
 ![Sample](sample.png)
-
-Star icons made by [Pixel perfect](https://www.flaticon.com/authors/pixel-perfect) from [www.flaticon.com](https://www.flaticon.com)
