@@ -16,7 +16,7 @@ public class EmarsysInboxConfig {
     public static var favImageOff: UIImage? = UIImage(named: "star", in: Bundle(for: EmarsysInboxConfig.self), compatibleWith: nil)
     public static var favImageOn: UIImage? = UIImage(named: "star.fill", in: Bundle(for: EmarsysInboxConfig.self), compatibleWith: nil)
     public static var notOpenedViewColor: UIColor? = .color(fromHexCode: 0x5F9F9FFF)
-    public static var defaultImage: UIImage? = UIImage(named: "emarsys", in: Bundle(for: EmarsysInboxConfig.self), compatibleWith: nil)
+    public static var defaultImage: UIImage? = UIImage(named: "logo", in: Bundle(for: EmarsysInboxConfig.self), compatibleWith: nil)
     public static var highPriorityImage: UIImage? = UIImage(named: "exclamationmark", in: Bundle(for: EmarsysInboxConfig.self), compatibleWith: nil)
     
 }
