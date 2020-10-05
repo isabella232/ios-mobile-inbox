@@ -15,8 +15,11 @@ class EmarsysInboxTableViewCell: UITableViewCell {
     @IBOutlet weak var messageImageView: UIImageView!
     @IBOutlet weak var highPriorityImageView: UIImageView!
     
+    var imageUrl: String?
+    
     override func awakeFromNib() {
         messageImageView.layer.cornerRadius = 15
+        messageImageView.backgroundColor = EmarsysInboxConfig.imageCellBackgroundColor
     }
     
 }
