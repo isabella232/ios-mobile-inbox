@@ -94,14 +94,20 @@ extension EmarsysInboxController: UITableViewDataSource, UITableViewDelegate {
         cell.titleLabel.text = message.title
         cell.bodyLabel.text = message.body
         
-        if let url = message.imageUrl {
-            cell.messageImageView.downloaded(from: url)
-        } else {
+        guard let imageUrl = message.imageUrl, let url = URL(string: imageUrl) else {
             cell.messageImageView.image = EmarsysInboxConfig.defaultImage
+            return cell
         }
-        
-//        cell.datetimeLabel.text = DateFormatter.yyyyMMddHHmm
-//            .string(from: Date(timeIntervalSince1970: TimeInterval(truncating: message.receivedAt)))
+        cell.imageUrl = imageUrl
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200, error == nil,
+                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+                let data = data, let image = UIImage(data: data) else { return }
+            DispatchQueue.main.async() {
+                guard cell.imageUrl == imageUrl else { return }
+                cell.messageImageView.image = image
+            }
+        }.resume()
         
         return cell
     }

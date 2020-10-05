@@ -70,7 +70,15 @@ extension EmarsysInboxDetailController: UICollectionViewDataSource, UICollection
             return cell
         }
         cell.imageUrl = imageUrl
-        cell.imageView.downloaded(from: url)
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200, error == nil,
+                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+                let data = data, let image = UIImage(data: data) else { return }
+            DispatchQueue.main.async() {
+                guard cell.imageUrl == imageUrl else { return }
+                cell.imageView.image = image
+            }
+        }.resume()
         
         return cell
     }
