@@ -84,6 +84,7 @@ extension EmarsysInboxController: UITableViewDataSource, UITableViewDelegate {
         
         guard indexPath.row < messages?.count ?? 0, let message = messages?[indexPath.row] else { return cell }
         
+        cell.highPriorityImageView.tintColor = .red
         cell.favImageView?.image = message.tags?.contains(EmarsysInboxTag.pinned) ?? false ?
             EmarsysInboxConfig.favImageOn : EmarsysInboxConfig.favImageOff
         cell.favImageView?.tintColor = message.tags?.contains(EmarsysInboxTag.pinned) ?? false ?

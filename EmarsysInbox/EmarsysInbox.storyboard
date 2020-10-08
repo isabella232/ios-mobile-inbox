@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17503.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -64,7 +64,6 @@
                                                         <constraint firstAttribute="width" constant="25" id="rGH-jk-jHb"/>
                                                         <constraint firstAttribute="height" constant="25" id="sKe-uU-EUv"/>
                                                     </constraints>
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="medium"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MUT-IZ-idZ">
                                                     <rect key="frame" x="131" y="19" width="263" height="68"/>
@@ -106,7 +105,7 @@
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exclamationmark" translatesAutoresizingMaskIntoConstraints="NO" id="ePT-wO-Gg1">
                                                     <rect key="frame" x="379" y="10" width="25" height="25"/>
-                                                    <color key="tintColor" systemColor="systemRedColor"/>
+                                                    <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="25" id="GlC-0z-F29"/>
                                                         <constraint firstAttribute="height" constant="25" id="wja-W5-U8d"/>
@@ -203,10 +202,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="sfl-0C-olx">
-                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="150"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="135"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwk-68-pYS">
-                                                    <rect key="frame" x="8" y="158" width="284" height="24"/>
+                                                    <rect key="frame" x="8" y="143" width="284" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="24" id="mF3-b7-EwN"/>
                                                     </constraints>
@@ -215,13 +214,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ykl-03-Y7s">
-                                                    <rect key="frame" x="8" y="190" width="284" height="21.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <rect key="frame" x="8" y="175" width="284" height="90"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Datetime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fh5-IK-WOg">
-                                                    <rect key="frame" x="8" y="221.5" width="284" height="20"/>
+                                                    <rect key="frame" x="8" y="275" width="284" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="eKq-Py-eI6"/>
                                                     </constraints>
@@ -239,11 +238,12 @@
                                                 <constraint firstAttribute="trailing" secondItem="dwk-68-pYS" secondAttribute="trailing" constant="8" id="O4j-pj-A7s"/>
                                                 <constraint firstItem="Fh5-IK-WOg" firstAttribute="top" secondItem="Ykl-03-Y7s" secondAttribute="bottom" constant="10" id="TCL-HP-wTc"/>
                                                 <constraint firstItem="Ykl-03-Y7s" firstAttribute="leading" secondItem="yzz-LW-PA7" secondAttribute="leading" constant="8" id="Vn3-9Q-aKR"/>
+                                                <constraint firstAttribute="bottom" secondItem="Fh5-IK-WOg" secondAttribute="bottom" constant="5" id="ZGK-KE-xyr"/>
                                                 <constraint firstItem="Fh5-IK-WOg" firstAttribute="leading" secondItem="yzz-LW-PA7" secondAttribute="leading" constant="8" id="f42-QN-kKy"/>
                                                 <constraint firstItem="sfl-0C-olx" firstAttribute="top" secondItem="yzz-LW-PA7" secondAttribute="top" id="pAf-Bp-UQc"/>
                                                 <constraint firstItem="Ykl-03-Y7s" firstAttribute="top" secondItem="dwk-68-pYS" secondAttribute="bottom" constant="8" symbolic="YES" id="s4W-86-dla"/>
                                                 <constraint firstItem="dwk-68-pYS" firstAttribute="top" secondItem="sfl-0C-olx" secondAttribute="bottom" constant="8" id="uOi-Nc-rbX"/>
-                                                <constraint firstItem="sfl-0C-olx" firstAttribute="height" secondItem="yzz-LW-PA7" secondAttribute="height" multiplier="0.5" id="uXe-AL-NZ0"/>
+                                                <constraint firstItem="sfl-0C-olx" firstAttribute="height" secondItem="yzz-LW-PA7" secondAttribute="height" multiplier="0.45" id="uXe-AL-NZ0"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="300" height="300"/>
@@ -281,14 +281,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="exclamationmark" width="2" height="12"/>
+        <image name="exclamationmark" width="7" height="47"/>
         <image name="logo" width="584" height="584"/>
-        <image name="star" width="15" height="14"/>
+        <image name="star" width="55" height="52"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
