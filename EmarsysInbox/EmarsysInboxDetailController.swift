@@ -50,7 +50,6 @@ extension EmarsysInboxDetailController: UICollectionViewDataSource, UICollection
         cell.bodyLabel.textColor = EmarsysInboxConfig.bodyForegroundColor
         
         cell.imageView.image = nil
-//        cell.imageViewAspectRatio.constant = 0
         cell.imageUrl = nil
         
         guard indexPath.row < messages?.count ?? 0, let message = messages?[indexPath.row] else { return cell }
