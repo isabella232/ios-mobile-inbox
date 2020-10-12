@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17502"/>
@@ -15,14 +15,14 @@
             <objects>
                 <viewController storyboardIdentifier="EmarsysInboxController" id="3LT-0e-heG" customClass="EmarsysInboxController" customModule="EmarsysInbox" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i2c-b1-7mo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5lE-Go-t2n">
-                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inbox" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQr-dB-4JN">
-                                        <rect key="frame" x="10" y="5" width="394" height="40"/>
+                                        <rect key="frame" x="10" y="5" width="355" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="1t5-wE-UZB"/>
                                         </constraints>
@@ -40,15 +40,15 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="106" estimatedRowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RjU-01-aXD">
-                                <rect key="frame" x="0.0" y="94" width="414" height="802"/>
+                                <rect key="frame" x="0.0" y="50" width="375" height="617"/>
                                 <color key="backgroundColor" red="0.81960784310000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="separatorInset" minX="80" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="EmarsysInboxTableViewCell" rowHeight="106" id="1lk-Af-aEe" customClass="EmarsysInboxTableViewCell" customModule="EmarsysInbox" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="106"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1lk-Af-aEe" id="DRa-DM-bKe">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="106"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="106"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9QL-C8-1FM">
@@ -66,10 +66,10 @@
                                                     </constraints>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MUT-IZ-idZ">
-                                                    <rect key="frame" x="131" y="19" width="263" height="68"/>
+                                                    <rect key="frame" x="131" y="19" width="228" height="68"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UmX-1g-xiv">
-                                                            <rect key="frame" x="0.0" y="0.0" width="243" height="22"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="208" height="22"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="22" id="bRe-y3-Ih3"/>
                                                             </constraints>
@@ -78,8 +78,8 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Jn-no-g7Z">
-                                                            <rect key="frame" x="0.0" y="22" width="263" height="46"/>
-                                                            <string key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+                                                            <rect key="frame" x="0.0" y="22" width="228" height="46"/>
+                                                            <mutableString key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</mutableString>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -104,7 +104,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exclamationmark" translatesAutoresizingMaskIntoConstraints="NO" id="ePT-wO-Gg1">
-                                                    <rect key="frame" x="379" y="10" width="25" height="25"/>
+                                                    <rect key="frame" x="340" y="10" width="25" height="25"/>
                                                     <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="25" id="GlC-0z-F29"/>
@@ -181,31 +181,31 @@
             <objects>
                 <viewController storyboardIdentifier="EmarsysInboxDetailController" id="sRq-AI-qrZ" customClass="EmarsysInboxDetailController" customModule="EmarsysInbox" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QhT-x5-Tep">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1Dt-Nc-qF8">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                 <color key="backgroundColor" red="0.81960784310000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Zor-tE-IXv">
-                                    <size key="itemSize" width="300" height="300"/>
+                                    <size key="itemSize" width="414" height="644"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EmarsysInboxDetailCollectionViewCell" id="agR-og-tpY" customClass="EmarsysInboxDetailCollectionViewCell" customModule="EmarsysInbox" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                        <rect key="frame" x="0.0" y="1.5" width="414" height="644"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yzz-LW-PA7">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="644"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="sfl-0C-olx">
-                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="135"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="290"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwk-68-pYS">
-                                                    <rect key="frame" x="8" y="143" width="284" height="24"/>
+                                                    <rect key="frame" x="8" y="298" width="398" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="24" id="mF3-b7-EwN"/>
                                                     </constraints>
@@ -213,14 +213,15 @@
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ykl-03-Y7s">
-                                                    <rect key="frame" x="8" y="175" width="284" height="90"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ykl-03-Y7s">
+                                                    <rect key="frame" x="8" y="330" width="398" height="243.5"/>
+                                                    <mutableString key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</mutableString>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Datetime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fh5-IK-WOg">
-                                                    <rect key="frame" x="8" y="275" width="284" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:10 - 08 Oct 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fh5-IK-WOg">
+                                                    <rect key="frame" x="8" y="619" width="398" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="eKq-Py-eI6"/>
                                                     </constraints>
@@ -236,7 +237,6 @@
                                                 <constraint firstAttribute="trailing" secondItem="Fh5-IK-WOg" secondAttribute="trailing" constant="8" id="NAF-2G-eBk"/>
                                                 <constraint firstItem="dwk-68-pYS" firstAttribute="leading" secondItem="yzz-LW-PA7" secondAttribute="leading" constant="8" id="Nw7-3L-6Bu"/>
                                                 <constraint firstAttribute="trailing" secondItem="dwk-68-pYS" secondAttribute="trailing" constant="8" id="O4j-pj-A7s"/>
-                                                <constraint firstItem="Fh5-IK-WOg" firstAttribute="top" secondItem="Ykl-03-Y7s" secondAttribute="bottom" constant="10" id="TCL-HP-wTc"/>
                                                 <constraint firstItem="Ykl-03-Y7s" firstAttribute="leading" secondItem="yzz-LW-PA7" secondAttribute="leading" constant="8" id="Vn3-9Q-aKR"/>
                                                 <constraint firstAttribute="bottom" secondItem="Fh5-IK-WOg" secondAttribute="bottom" constant="5" id="ZGK-KE-xyr"/>
                                                 <constraint firstItem="Fh5-IK-WOg" firstAttribute="leading" secondItem="yzz-LW-PA7" secondAttribute="leading" constant="8" id="f42-QN-kKy"/>
@@ -246,7 +246,7 @@
                                                 <constraint firstItem="sfl-0C-olx" firstAttribute="height" secondItem="yzz-LW-PA7" secondAttribute="height" multiplier="0.45" id="uXe-AL-NZ0"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="300" height="300"/>
+                                        <size key="customSize" width="414" height="644"/>
                                         <connections>
                                             <outlet property="bodyLabel" destination="Ykl-03-Y7s" id="biJ-J7-zQ2"/>
                                             <outlet property="datetimeLabel" destination="Fh5-IK-WOg" id="KTM-Ta-Ych"/>

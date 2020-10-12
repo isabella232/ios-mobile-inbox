@@ -56,6 +56,11 @@ public class EmarsysInboxController: UIViewController {
 extension EmarsysInboxController: UITableViewDataSource, UITableViewDelegate {
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if messages?.count == 0 {
+            tableView.setEmptyView(title: "You don't have any message.", message: "Your messages will be displayed here.")
+        } else {
+            tableView.restore()
+        }
         return messages?.count ?? 0
     }
     
