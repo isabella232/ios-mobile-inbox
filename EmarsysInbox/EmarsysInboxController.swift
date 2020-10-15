@@ -32,8 +32,6 @@ public class EmarsysInboxController: UIViewController {
         
         tableView.addSubview(refreshControl)
         refreshControl.addTarget(self, action: #selector(fetchMessages), for: .valueChanged)
-        
-        fetchMessages()
     }
     
     @objc func fetchMessages() {
@@ -49,6 +47,8 @@ public class EmarsysInboxController: UIViewController {
     }
     
     public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchMessages()
         tableView.reloadData()
     }
 }
