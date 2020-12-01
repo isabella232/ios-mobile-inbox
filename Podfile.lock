@@ -1,5 +1,5 @@
 PODS:
-  - EmarsysSDK (2.8.0)
+  - EmarsysSDK (2.10.0)
 
 DEPENDENCIES:
   - EmarsysSDK
@@ -9,7 +9,7 @@ SPEC REPOS:
     - EmarsysSDK
 
 SPEC CHECKSUMS:
-  EmarsysSDK: 30b09a7758cbf5f4882a99d2f75542cf14e52e6c
+  EmarsysSDK: 30bac2cbbf649f31525bda30dafac1438db3a246
 
 PODFILE CHECKSUM: efaa629722be8e58d2a75cb060926a8a0d89c4b1
 

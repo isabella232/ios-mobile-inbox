@@ -1,7 +1,7 @@
 PODS:
   - EmarsysInbox (1.0.0):
     - EmarsysSDK
-  - EmarsysSDK (2.8.0)
+  - EmarsysSDK (2.10.0)
 
 DEPENDENCIES:
   - EmarsysInbox (from `..`)
@@ -16,7 +16,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   EmarsysInbox: 5e0ff0a281d39347618318f79ef5bbf7e4074ed2
-  EmarsysSDK: 30b09a7758cbf5f4882a99d2f75542cf14e52e6c
+  EmarsysSDK: 30bac2cbbf649f31525bda30dafac1438db3a246
 
 PODFILE CHECKSUM: 7abb0560843dceb445803f57f1a171654c704a0e
 
