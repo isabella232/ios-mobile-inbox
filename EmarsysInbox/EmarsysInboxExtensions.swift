@@ -34,19 +34,22 @@ extension UITableView {
         
         titleLabel.textColor = .black
         titleLabel.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        titleLabel.textAlignment = .center
         
         messageLabel.textColor = .black
         messageLabel.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+        messageLabel.textAlignment = .center
         
         emptyView.addSubview(titleLabel)
         emptyView.addSubview(messageLabel)
         
-        titleLabel.centerYAnchor.constraint(equalTo: emptyView.centerYAnchor).isActive = true
-        titleLabel.centerXAnchor.constraint(equalTo: emptyView.centerXAnchor).isActive = true
+        titleLabel.leftAnchor.constraint(equalTo: emptyView.leftAnchor, constant: 20).isActive = true
+        titleLabel.rightAnchor.constraint(equalTo: emptyView.rightAnchor, constant: -20).isActive = true
         
         messageLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20).isActive = true
         messageLabel.leftAnchor.constraint(equalTo: emptyView.leftAnchor, constant: 20).isActive = true
         messageLabel.rightAnchor.constraint(equalTo: emptyView.rightAnchor, constant: -20).isActive = true
+        messageLabel.centerYAnchor.constraint(equalTo: emptyView.centerYAnchor).isActive = true
         
         titleLabel.text = title
         messageLabel.text = message

@@ -4,12 +4,12 @@
 
 import Foundation
 
-struct EmarsysInboxTag {
+public struct EmarsysInboxTag {
     
-    static let seen = "seen"
-    static let opened = "opened"
-    static let pinned = "pinned"
-    static let deleted = "deleted"
-    static let high = "high"
+    public static let seen = "seen"
+    public static let opened = "opened"
+    public static let pinned = "pinned"
+    public static let deleted = "deleted"
+    public static let high = "high"
     
 }
