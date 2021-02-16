@@ -5,7 +5,7 @@
 import UIKit
 import EmarsysSDK
 
-public class EmarsysInboxController: UIViewController {
+open class EmarsysInboxController: UIViewController {
     
     public static func new() -> UIViewController {
         return UIStoryboard.init(name: "EmarsysInbox", bundle: Bundle(for: self))
@@ -14,11 +14,11 @@ public class EmarsysInboxController: UIViewController {
     
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var headerLabel: UILabel!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet public weak var tableView: UITableView!
     var refreshControl = UIRefreshControl()
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
-    var messages: [EMSMessage]?
+    public var messages: [EMSMessage]?
     var isFetchingMessages = false
     
     public override func viewDidLoad() {
@@ -132,7 +132,7 @@ extension EmarsysInboxController: UITableViewDataSource, UITableViewDelegate {
 
 extension EmarsysInboxController {
     
-    public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    open override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? EmarsysInboxDetailController,
             let tableViewCell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: tableViewCell) {
             destination.initialIndexPath = indexPath
