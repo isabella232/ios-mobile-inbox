@@ -15,9 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let config = EMSConfig.make { builder in
             builder.setMobileEngageApplicationCode("EMS89-AACEA")
-            builder.setContactFieldId(100010824)
         }
-        Emarsys.setup(with: config)
+        Emarsys.setup(config: config)
         
         return true
     }
