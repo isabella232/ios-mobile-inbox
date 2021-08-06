@@ -68,7 +68,7 @@ extension EmarsysInboxController: UITableViewDataSource, UITableViewDelegate {
         guard indexPath.row < messages?.count ?? 0, let message = messages?[indexPath.row],
             !(message.tags?.contains(EmarsysInboxTag.seen) ?? false) else { return }
         message.tags?.append(EmarsysInboxTag.seen)
-        Emarsys.messageInbox.addTag(EmarsysInboxTag.seen, forMessage: message.id)
+        Emarsys.messageInbox.addTag(tag: EmarsysInboxTag.seen, messageId: message.id)
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -122,7 +122,7 @@ extension EmarsysInboxController: UITableViewDataSource, UITableViewDelegate {
     public func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         guard indexPath.row < messages?.count ?? 0, let message = messages?[indexPath.row] else { return }
         if editingStyle == .delete {
-            Emarsys.messageInbox.addTag(EmarsysInboxTag.deleted, forMessage: message.id)
+            Emarsys.messageInbox.addTag(tag: EmarsysInboxTag.deleted, messageId: message.id)
             messages?.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
@@ -146,10 +146,10 @@ extension EmarsysInboxController {
             indexPath.row < messages?.count ?? 0, let message = messages?[indexPath.row] else { return }
         if let pinnedIndex = message.tags?.firstIndex(of: EmarsysInboxTag.pinned) {
             message.tags?.remove(at: pinnedIndex)
-            Emarsys.messageInbox.removeTag(EmarsysInboxTag.pinned, fromMessage: message.id)
+            Emarsys.messageInbox.removeTag(tag: EmarsysInboxTag.pinned, messageId: message.id)
         } else {
             message.tags?.append(EmarsysInboxTag.pinned)
-            Emarsys.messageInbox.addTag(EmarsysInboxTag.pinned, forMessage: message.id)
+            Emarsys.messageInbox.addTag(tag: EmarsysInboxTag.pinned, messageId: message.id)
         }
         tableView.reloadData()
     }
